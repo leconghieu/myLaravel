@@ -1,0 +1,54 @@
+.title{
+	background:#0066ff;
+	padding:5px 10px;
+	text-align:center;
+}
+ul.list{
+	list-style-type: none;
+	margin:0px;
+	padding:0px;
+}
+ul.list li{
+	padding:10px;
+	text-align:center;
+	cursor:pointer;
+}
+ul.list li:hover{
+	background:#ccc;
+}
+.row{
+	width:90%;
+	margin: 0 auto;
+}
+.item{
+	width:150px;
+	height:150px;
+	margin-right:20px;
+}
+.categories{
+	display:flex;
+	padding:5px 20px 5px 10px;
+}
+.categories p{
+	width:100%;
+	display:inline-block;
+}
+.posts{
+    font-size:20px;
+    padding:5px 0px 5px 10px;
+    cursor:pointer;
+}
+.detail{
+    color:black;
+    padding:10px;
+    background:#0066ff;
+    border-radius:3px;
+}
+.detail:hover{
+    text-decoration:none;
+}
+.representative{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

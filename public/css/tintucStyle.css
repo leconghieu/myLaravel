@@ -1,0 +1,26 @@
+td, th{
+    padding:20px 40px;
+    font-size:20px;
+    text-align:center;
+    border:1px solid #ccc;
+}
+a:hover
+{
+    text-decoration:none;
+}
+.list-controll{
+    list-style-type:none;
+}
+.list-controll li{
+    padding:6px;
+}
+.post{
+    display:flex;
+}
+.box-thumbnail{
+    margin-right:25px;
+}
+
+.describe{
+    color:black;
+}

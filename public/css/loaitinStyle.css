@@ -1,0 +1,15 @@
+td, th{
+    padding:20px 40px;
+    font-size:20px;
+    text-align:center;
+    border:1px solid #ccc;
+}
+.body{
+    margin-top:20px;
+}
+.list-controll{
+    list-style-type:none;
+}
+.list-controll li{
+    padding:6px;
+}
