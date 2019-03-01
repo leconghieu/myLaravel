@@ -45,7 +45,7 @@ class tintucController extends Controller
         $id = $request->id;
         $tintuc = tintuc::where('id_tintuc', $id);
         $tintuc->delete();
-        $tintuc = DB::select('SELECT tieude, tomtat, tenloai, thumbnail FROM tintuc, loaitin WHERE tintuc.id_loai = loaitin.id_loai && loaitin.status = 1');
+        $tintuc = DB::select('SELECT id_tintuc, tieude, tomtat, tenloai, thumbnail FROM tintuc, loaitin WHERE tintuc.id_loai = loaitin.id_loai && loaitin.status = 1');
         return $tintuc;
     }
 

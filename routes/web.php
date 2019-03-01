@@ -22,10 +22,13 @@ Route::group(['prefix' => 'admin'], function(){
 		Route::get('danhsach', 'loaitinController@xemdanhsach')->name('xemds');
 		Route::get('them', 'loaitinController@themdanhsach')->name('themds');
 		Route::get('xoa', 'loaitinController@xoadanhsach')->name('xoaloaitin');
+
+		Route::get('updateLoaitin/{id}', 'loaitinController@updateLoaitin')->name('updateLoaitin');
+		Route::post('updateLoaitin', 'loaitinController@update')->name('updateLoai');
+
 		
 	});
 	Route::group(['prefix' => 'tintuc'], function(){
-
 		Route::get('danhsach', 'tintucController@xemdanhsach')->name('xemtt');
 		Route::get('them', 'tintucController@themdanhsach')->name('themtt');
 		Route::get('xoa', 'tintucController@xoadanhsach')->name('xoatintuc');
@@ -34,4 +37,4 @@ Route::group(['prefix' => 'admin'], function(){
 Route::post('addloai', ['as' => 'addloai', 'uses' => 'loaitinController@add']);
 Route::post('addTintuc', ['as' => 'addTintuc', 'uses' => 'tintucController@add']);
 
-Route::get('demo', 'loaitinController@demo');
+
