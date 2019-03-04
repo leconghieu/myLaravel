@@ -20,6 +20,8 @@
                     }).done(function(result){
                         var html = "";
                         $.each(result, function(key, value){
+                            var route = "{{ route('updateTintuc', ":id")}}";
+                            route = route.replace(':id', value['id_tintuc'])
                             html += "<tr>";
                                 html += "<input type='hidden' value='" + value['id_tintuc'] + "' class='tintuc'>";
                                 html += "<td>";
@@ -34,9 +36,9 @@
                                 html += "<td>";
                                     html += value['tenloai'];
                                 html += "</td>";
-                                html += "<td>";
+                                html += "<td><a id='updateRouter" + value['id_tintuc'] + "' href='"+route+"'>";
                                     html += "Chỉnh sửa";
-                                html += "</td>";
+                                html += "</a></td>";
                                 html += "<td class='xoa'>";
                                     html += "Xóa";
                                 html += "</td>";
@@ -76,7 +78,7 @@
                             <td>{{$key->tieude}}</td>
                             <td>{{$key->tomtat}}</td>
                             <td>{{$key->tenloai}}</td>
-                            <td>Chỉnh sửa</td>
+                            <td><a href="{{route('updateTintuc', ['id' => $key->id_tintuc])}}">Chỉnh sửa</a></td>
                             <td class="xoa">Xóa</td>
                         </tr>
                     @endforeach

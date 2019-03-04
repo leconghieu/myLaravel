@@ -26,7 +26,7 @@ class loaitinController extends Controller
     }
     public function add(LoaiTinValidate $request)
     {
-        dd($request->all());
+
         DB::table('loaitin')->insert([
           'maloai' => $request->input('maloai'), 'tenloai' => $request->input('tenloai')
         ]);

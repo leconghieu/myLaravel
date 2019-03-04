@@ -14,7 +14,19 @@
     <div class="row">
         @include('dashboard')
         <div class="col-md-9">
-
+            @foreach($loaitin as $key)
+                <div>
+                    <h3>{{$key->tenloai}}</h3>
+                    <ul>
+                        @foreach($tintuc as $val)
+                            @if($val->id_loai == $key->id_loai)
+                                
+                            @endif
+                        @endforeach
+                    </ul>
+                </div>
+                <hr>
+            @endforeach
         </div>
     </div>
 </body>

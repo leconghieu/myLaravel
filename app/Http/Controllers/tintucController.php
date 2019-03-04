@@ -48,5 +48,11 @@ class tintucController extends Controller
         $tintuc = DB::select('SELECT id_tintuc, tieude, tomtat, tenloai, thumbnail FROM tintuc, loaitin WHERE tintuc.id_loai = loaitin.id_loai && loaitin.status = 1');
         return $tintuc;
     }
+    public function updateTintuc($id){
+        $tintuc = tintuc::where('id_tintuc', $id)->first();
+        $loaitin = loaitin::all();
+
+        return view('formUpdateTinTuc', ['tintuc' => $tintuc, 'loaitin' => $loaitin]);
+    }
 
 }

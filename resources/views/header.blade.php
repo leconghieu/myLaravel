@@ -14,6 +14,20 @@
                     <a class="nav-link" href="{{route('xemds')}}">Loại tin</a>
                 </li>
             </ul>
+            <ul class="navbar-nav ml-auto">
+                @if (session()->has('user'))
+                    <li class="nav-item">
+                        <a href="{{route('dangxuat')}}" class="nav-link">Đăng xuất</a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a href="{{route('formdangnhap')}}" class="nav-link">Đăng nhập</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{route('formdangky')}}" class="nav-link">Đăng ký</a>
+                    </li>
+                @endif
+            </ul>
         </div>
     </nav>
 </div>

@@ -33,6 +33,8 @@
                     else{
                         var html ="";
                         $.each(result, function(key, value){
+                            var route = "{{ route('updateLoaitin', ":id")}}" ;
+                            route = route.replace(':id', value['id_loai'])
                             html += "<tr>";
                                 html += "<input type='hidden' value='" + value['id_loai'] + "' class='id-loai'>";
                                 html += "<td>";
@@ -44,15 +46,16 @@
                                 html += "<td>";
                                     html += value['status'];
                                 html += "</td>";
-                                html += "<td>";
+                                html += "<td><a id='updateRouter" + value['id_loai'] + "' href='"+route+"'>";
+                            html += "Chỉnh sửa";
+                                html += "</a></td>";
+                                html += "<td class='xoa'>";
                                     html += "Xóa";
                                 html += "</td>";
-                                html += "<td class='xoa'>";
-                                html += "</td>";
-                            html += "Xóa";
                             html += "</tr>";
                         });
                         $('#loaitin').html(html);
+                        // $('#updateRouter' + value["id_loai"]).attr('href').replace(/.$/, value['id_loai']);
                         $('.alert-danger').addClass('fade');
                     }
                 });
